@@ -1,5 +1,9 @@
 import sqlite3
-dbname = 'club_room.db'
+import os
+
+base_dir = os.path.dirname(os.path.abspath(__file__))
+
+dbname = os.path.join(base_dir, 'club_room.db')
 conn = sqlite3.connect(dbname)
 c = conn.cursor()
 
